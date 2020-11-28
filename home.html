@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <title>UCL Blog</title>
+    <link rel="shortcut icon" href="./images/icon.ico">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+ <script src="./public/scripts/rotate.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+    <link rel="stylesheet" href="./public/css/home.css">
+
+</head>
+
+<body>
+    <div class="col-md-6 col-md-offset-2 col-sm-12" id="side-panel">
+
+        <form id="match-form">
+            <select name="dropdown1" id="dropdown1">
+
+                <option value="Select round:" selected>Select round:</option>
+                <option value="quarters">Quarter Finals</option>
+                <option value="semis">Semi Finals</option>
+                <option value="finals">Finals</option>
+            </select>
+            <br><br>
+            <select name="dropdown2" id="dropdown2">
+                <option value="Select match:" selected>Select match:</option>
+            </select>
+            <br><br>
+            <button type="button" id="goButton">Let's Go!!</button>
+            <br><br>
+            <span style="color: white; display: none; font-size:1.2em;" id="selectError">Please select round & match</span>
+
+        </form>
+
+        <form id="sign-out-form" action="/signOut" method="get">
+            <button id="sign-out-button">Sign Out</button>
+        </form>
+
+    </div>
+
+    <div id="mainContainer">
+
+
+
+        <div class="col-md-12 col-md-offset-2 col-sm-12" id="game-column">
+            <div class="game-wrapper" id="game-div" style="display: none">
+                <div class="home-team">
+
+                    <img src="" id="home-image"/>
+                    <br>
+                    <span id="home-name">FC Barcelona</span>
+
+                </div>
+                <div class="versus">
+
+                    <span id="versus">vs.</span>
+
+                </div>
+
+                <div class="away-team">
+
+                    <img src="" id="away-image"/>
+                    <br>
+                    <span class="team-name" id="away-name">Manchester United</span>
+                </div>
+                <div>
+                    <br>
+                    <span class="team-name" id="stadium-name">Stadium: Camp Nou</span><br>
+                    <span class="team-name" id="match-date">Wednesday April 5, 2019</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div id="refresh-div">
+
+            <img src="images/refresh.png" id="refresh-img" style="display: none"/>
+        </div>
+
+
+        <div class="col-md-12 col-md-offset-2 col-sm-12" id="comment-section">
+
+            
+        </div>
+        <br>
+        <div class="col-md-12 col-md-offset-2 col-sm-12" id="new-comment-div">
+            <div class="panel panel-info">
+
+
+
+
+                <div class="panel-body">
+                    <textarea class="form-control" placeholder="write a comment..." rows="2"
+                        id="new-comment-text" style="display: none"></textarea>
+                    <button type="button" class="btn btn-info pull-right" id="post-button" style="display: none">Post</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+<script src="./public/scripts/home.js"></script>
+<textarea style="display: none;" value="" id="matchID"></textarea>
+
+</body>
+
+</html>

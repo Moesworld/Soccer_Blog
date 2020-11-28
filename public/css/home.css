@@ -1,0 +1,239 @@
+@media only screen 
+  and (max-device-height: 900px)
+   {
+
+   	body{
+
+   		font-size: 0.7em;
+
+
+   	}
+
+   	img{
+   		width: 75px;
+   		height: 75px;
+
+   	}
+
+   	#goButton{
+
+   		font-size: 1em;
+
+   	}
+
+   	h5{
+
+   		font-size: 0.8em;
+   	}
+
+#sign-out-button{
+
+	background-color: black; 
+	color: white; 
+	border: 0; 
+	font-size: 1em; 
+	width: 100%; 
+	height: 5vh;
+}
+
+
+#versus{
+
+	font-size: 1em;
+}
+
+.team-name{
+
+font-size: 1em;
+
+}
+
+
+}
+
+
+
+body{
+
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+h5{
+	color:navy;
+}
+
+#mainContainer{
+	width: 79%;
+	margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    height: 100vh;
+    display: inline;
+    float: right;
+
+}
+
+
+img{
+
+	width: 100px;
+	height:	 100px;
+
+}
+
+.game-wrapper{
+padding-top: 30px;
+width: 100%;
+
+}
+
+.home-team{
+	display: inline-block;
+}
+
+.away-team{
+	margin-left: 10%;
+	display: inline-block;
+}
+
+.versus{
+	margin-left: 10%;
+	display: inline-block;
+
+}
+
+.comment{
+	text-align: left; 
+	border-bottom: 1px; 
+	border-color: grey; 
+	border-bottom-style: solid; 
+	height: 7vh; 
+	margin-top: 10px;
+
+}
+
+#goButton{
+
+	background-color: black; 
+	color: white; 
+	border: 0; 
+	font-size: 1.25em; 
+	width: 7.5vw;
+
+}
+
+
+
+#match-form{
+
+margin-top: 12vh; margin-left: 3vw;
+
+}
+
+
+#sign-out-form{
+
+
+	margin-top: 65vh; width: 100%; padding: 0;
+}
+
+
+#side-panel{
+
+	height: 110vh;
+	 width: 20%; 
+	 background-color: navy; 
+	 margin-left: 0; 
+	 display: inline; 
+	 float: left; 
+	 padding: 0;
+	 margin-bottom: 0;
+}
+
+
+#sign-out-button{
+
+	background-color: black; 
+	color: white; 
+	border: 0; 
+	font-size: 1.25em; 
+	width: 100%; 
+	height: 5vh;
+}
+
+
+#versus{
+
+	font-size: 1.5em;
+}
+
+.team-name{
+
+font-size: 1.2em;
+
+}
+
+#refresh-div{
+	padding-top: 15px;
+	background-color: #F8F8F8; 
+	width: 100%; 
+	text-align: right; 
+	padding-bottom: 10px;
+}
+
+
+#refresh-img{
+	width: 35px;
+	height:35px; 
+	margin-right: 20px;
+}
+
+
+#comment-section{
+
+	background-color: #F8F8F8; 
+	height: 60vh; 
+	margin-left: auto; 
+	margin-right:auto; 
+	overflow-y: scroll;"
+}
+
+#game-column{
+
+
+	background-color: #F8F8F8; 
+	height: 23vh; 
+	margin-left: auto;
+	margin-right:auto;
+}
+
+#new-comment-div{
+width: 100%; 
+padding: 0;
+margin: 0;
+
+}
+
+
+#new-comment-text{
+
+	width: 87%; 
+	display:inline; 
+	float: left;
+}
+
+#post-button{
+
+	display: inline; 
+	float:right; 
+	width: 13%; 
+	background-color: navy; 
+	border-color: navy; 
+	height: 6.4vh;
+}
+
+
