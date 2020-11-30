@@ -60,13 +60,18 @@ app.use(session({
 		httpOnly: true
 	}
 }))
+
 // Add middleware to check for logged-in users
 app.get('/', (req, res) => {
-	console.log('this is the session user', req.session.user)
+    console.log('this is the session user', req.session.user)
+    res.sendFile(__dirname + '/index.html')
 	res.redirect('/dashboard')
 })
 
-
+app.get('/team', (req, res) => {
+	console.log("Create Team portal accessed")
+	res.sendFile(__dirname + '/team.html')
+})
 
 app.get('/dashboard', (req, res) =>{
     console.log(req.session)
@@ -74,7 +79,6 @@ app.get('/dashboard', (req, res) =>{
         console.log('in dashboard session detected')
         res.sendFile(__dirname + '/home.html')
     }else{
-
         res.sendFile(__dirname + '/index.html')
 
     }
@@ -91,19 +95,22 @@ app.post('/signup', (req, res) =>{
 
 	User.find({username: req.body.username}).then((result) => {
         if(result.length === 0){
-            //res.send(result);
+            
             
             user.save().then((result) => {
             	console.log('saved user')
                 req.session.user = user._id;
                 req.session.username = user.username;
 
-                res.send({message: '/dashboard', status: "200"});
+                console.log("user has been created")
+                
             }).catch((error) => {
                 //res.sendFile(path.join(__dirname, "/public/pages/index.html"));
                 console.log('error')
                 res.send({message: 'short', status: "404"});
             }); 
+
+            res.redirect('/home.html')
         }else{
         	console.log('redirecting back to home')
             res.send({message: 'exists', status: "404"});
@@ -166,16 +173,16 @@ app.get('/signOut', (req, res) =>{
 })
 
 
-app.delete('/user/:id', (req, res)=>{
+app.get('/deleteUser', (req, res)=>{
 
-    User.findOneAndRemove({_id: new ObjectID(req.params.id)}, (err, res) => {
+    User.findOneAndDelete ({"username" :req.session.username}, (err) => {
         if(err){
-            res.send('Error occured, cannot delete');
+            console.log(err);
         }else{
-
-            res.send('deleted user: ', req.params.id)
+            console.log("User " + req.session.username + " has been Deleted");
         }
     });
+    res.redirect('/');
 
 
 })
@@ -286,7 +293,8 @@ app.post('/team', (req, res)=>{
     team.save().then((result)=>{
 
         console.log('added team')
-        res.send(team)
+        console.log(result);
+        res.redirect('/team');
     }).catch((error)=>{
 
         console.log('could not add team: ', error)

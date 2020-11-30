@@ -1,5 +1,5 @@
 body {
-    background: url('../../images/ucl.jpg') no-repeat center center fixed;
+    background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -9,7 +9,23 @@ body {
 }
 
 header {
-    overflow: auto;
+    display: flexbox;
+    margin:0;
+    width:100%;
+    align-content: center;
+    position: absolute;
+    top: 50%;
+    font-size: 3em;
+    left: -25%;
+    
+}
+
+button{
+    width: 300px;
+    height: 100px;
+    font-size: 3em;
+    font-weight: 100;
+    
 }
 
 .headerButton {

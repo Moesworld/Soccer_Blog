@@ -12,7 +12,7 @@ signInButton.addEventListener('click', signIn)
 
 function signIn(){
 
-	const usernameText = document.getElementById('InputEmail1').value
+	const usernameText = document.getElementById('').value
 	const passwordText = document.getElementById('InputPassword1').value
 
 
@@ -62,9 +62,9 @@ function signIn(){
 
 
 function signUp(){
-	const usernameText = document.getElementById('InputEmail2').value
-	const passwordText = document.getElementById('InputPassword2').value
-	const confirmText = document.getElementById('InputPassword3').value
+	const usernameText = document.getElementById('inputUsername').value
+	const passwordText = document.getElementById('inputPassword').value
+	const confirmText = document.getElementById('inputPassword').value
 	const errorMsg2 = document.getElementById('errorMsg2')
 
 
